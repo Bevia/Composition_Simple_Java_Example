@@ -8,14 +8,19 @@ public class Monitor {
     // here is where we model the monitor.
     // lets set some characteristics belonging to a computer monitor:
 
-    private final double monitorSize;  // inches
-    private final String monitorBrand; // manufacturer
-    private final String monitorType;  // tube, flat panel LED display, retina display, etc.
+    private  double monitorSize;  // inches
+    private  String monitorBrand; // manufacturer
+    private  String monitorType;  // tube, flat panel LED display, retina display, etc.
 
+    // (notice how we overload the constructor)
     public Monitor(String monitorBrand, double monitorSize, String monitorType) {
         this.monitorBrand = monitorBrand;
         this.monitorSize = monitorSize;
         this.monitorType = monitorType;
+    }
+
+    public Monitor(String monitorBrand) {
+        this.monitorBrand = monitorBrand;
     }
 
     public double getMonitorSize() {
