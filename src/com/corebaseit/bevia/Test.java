@@ -8,7 +8,7 @@ public class Test {
         //lets get some specifications from a computer:
         //the premise is:  a Computer HAS-a Monitor
 
-        Computer computer = new Computer();
+        Computer computer = new Computer("Apple", 15, "Retina Display");
 
         String monitorBrandName = computer.getMonitorBrand();
         double monitorSize = computer.getMonitorSize();
