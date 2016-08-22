@@ -24,7 +24,7 @@ public abstract class Computer implements Hardware {
     // note: Composition is about creating objects within objects. It simply means using instance variables
     // to refer to other objects!
     // we can now build the constructor and specify some unique characteristics:
-    // (notice how we overload the constructor)
+    // (notice how we overload the constructor for the MainFrame computer)
     public Computer(String monitorBrand, double monitorSize, String monitorType) {
         //Monitor stuff:
         this.monitorBrand = monitorBrand;
@@ -37,6 +37,7 @@ public abstract class Computer implements Hardware {
                 this.monitorType); //lets create a new monitor object!
     }
 
+    //Overloaded constructor for the Laptop computer:
     public Computer(String monitorBrand) {
         //Monitor stuff:
         this.monitorBrand = monitorBrand;
