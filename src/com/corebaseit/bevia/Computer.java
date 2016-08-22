@@ -17,19 +17,22 @@ public class Computer {
     private Monitor monitor;
 
     //now the field that will be received by calling method:
-    private String brand;
-    private int size;
-    private String type;
+    private final String monitorBrand;
+    private final double monitorSize;
+    private final String monitorType;
 
     // note: Composition is about creating objects within objects. It simply means using instance variables
     // to refer to other objects!
     // we can now build the constructor and specify some unique characteristics:
-    public Computer(String brand, int size, String type) {
-        this.brand = brand;
-        this.size = size;
-        this.type = type;
+    public Computer(String monitorBrand, double monitorSize, String monitorType) {
+        this.monitorBrand = monitorBrand;
+        this.monitorSize = monitorSize;
+        this.monitorType = monitorType;
 
-        this.monitor = new Monitor(brand, size, type); //lets create a new monitor object!
+        this.monitor = new Monitor(
+                this.monitorBrand,
+                this.monitorSize,
+                this.monitorType); //lets create a new monitor object!
     }
 
     // with this, we can now access any getter or setter from Monitor:
